@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="RotateLoadingProgressBarAttrs">
+        <attr name="startColor" format="color"/>
+        <attr name="endColor" format="color"/>
+        <attr name="duration" format="float"/>
+        <attr name="ringWidth" format="float"/>
+    </declare-styleable>
+    
+</resources>
