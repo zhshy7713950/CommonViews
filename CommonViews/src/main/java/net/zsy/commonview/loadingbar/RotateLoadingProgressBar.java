@@ -26,8 +26,8 @@ public class RotateLoadingProgressBar extends View {
     private static final float ringRaduisPercent = 0.65f; //圆环外圆半径占View最大半径的百分比
     private float ringWidthPercent = 0.2f; //圆环宽度占View最大半径的百分比
 
-    private Paint paint = new Paint(); //画笔
-    private Paint paintCircle = new Paint(); //画笔
+    private Paint paint; //画笔
+    private Paint paintCircle; //画笔
     private float width; //自定义view的宽度
     private float height; //自定义view的高度
     private float radius; //自定义view的最大半径
@@ -68,10 +68,12 @@ public class RotateLoadingProgressBar extends View {
     }
 
     private void init(){
+        paint = new Paint();
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setShader(new SweepGradient(0, 0, startColor, endColor));
 
+        paintCircle = new Paint();
         paintCircle.setAntiAlias(true);
         paintCircle.setStrokeJoin(Paint.Join.ROUND);
         paintCircle.setStrokeCap(Paint.Cap.ROUND);
@@ -135,7 +137,7 @@ public class RotateLoadingProgressBar extends View {
     public void setVisibility(int visibility) {
         super.setVisibility(visibility);
         if(visibility == VISIBLE){
-            this.startAnimation(animation);
+            startAnimation(animation);
         }else{
             clearAnimation();
         }
@@ -144,7 +146,9 @@ public class RotateLoadingProgressBar extends View {
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        this.startAnimation(animation);
+        if(getVisibility() == VISIBLE){
+            startAnimation(animation);
+        }
     }
 
     @Override

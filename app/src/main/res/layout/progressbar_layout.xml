@@ -4,13 +4,16 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@color/colorBlack">
 
-    <net.zsy.commonview.loadingbar.RotateLoadingProgressBar
+    <net.zsy.commonview.progressbar.RingProgressBar
+        android:id="@+id/rpb"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        rlpb:startColor="@color/colorWhite"
-        rlpb:endColor="@color/colorAccent"
+        rlpb:backgroundColor="@color/colorGray"
+        rlpb:progressBarColor="@color/colorAccent"
+        rlpb:textColor="@color/colorAccent"
         />
 
 </LinearLayout>
