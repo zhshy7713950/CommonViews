@@ -5,7 +5,7 @@
         <attr name="startColor" format="color"/>
         <attr name="endColor" format="color"/>
         <attr name="duration" format="float"/>
-        <attr name="ringWidth" format="color"/>
+        <attr name="ringWidth" format="float"/>
     </declare-styleable>
 
     <declare-styleable name="RingProgressBarAttrs">
