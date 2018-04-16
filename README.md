@@ -7,6 +7,6 @@ Gradle使用：
        maven { url 'https://www.jitpack.io' }
     }
 
-    compile 'com.github.zhshy7713950:CommonViews:v1.01'
+    compile 'com.github.zhshy7713950:CommonViews:v1.0.2'
 
 
